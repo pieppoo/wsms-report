@@ -5,21 +5,20 @@ using System.Text;
 
 namespace wsms.report.Model
 {
-    public class ReceiptData
+    public class PaymentData
     {
-        public string SupplierName { get; set; }
-        public string CustomerName { get; set; }
-        public string paymode { get; set; }
-        public string paydate { get; set; }
-        public string invoiceno { get; set; }
-        public string duedate { get; set; }
-        public string payamt { get; set; }
-        public string payamtword { get; set; }
-        public string renark { get; set; }
-        public string totaldebt { get; set; }
-        public string totalpaid { get; set; }
-        public string debtbalance { get; set; }
-        public string cardno { get; set; }
-        public string cardref { get; set; }
+        public string Name { get; set; }
+        public string PaymentMode { get; set; }
+        public string PayDate { get; set; }
+        public string InvoiceNo { get; set; }
+        public string DueDate { get; set; }
+        public string PaymentAmount { get; set; }
+        public string PaymentWritten { get; set; }
+        public string Remarks { get; set; }
+        public string TotalAmount { get; set; }
+        public string TotalPaid { get; set; }
+        public string BalanceAmount { get; set; }
+        public string CardNo { get; set; }
+        public string CardRef { get; set; }
     }
 }
