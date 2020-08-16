@@ -7,7 +7,8 @@ namespace wsms.report.Model
 {
     public class ReceiptData
     {
-        public string ShopName { get; set; }
+        public string SupplierName { get; set; }
+        public string CustomerName { get; set; }
         public string paymode { get; set; }
         public string paydate { get; set; }
         public string invoiceno { get; set; }
