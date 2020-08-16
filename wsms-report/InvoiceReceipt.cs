@@ -47,7 +47,7 @@ namespace wsms.report
                 lblCompanyPhoneNo.Text = Data.CompanyPhoneNo;
 
                 lblName.Text = Data.Name;
-                lblAddressPhoneNo.Text = Data.AddressPhoneNo;
+                rtAddressPhoneNo.Text = Data.AddressPhoneNo;
                 lblOrderNo.Text = Data.OrderNo;
                 lblOrderDate.Text = Data.OrderDate;
                 lblDueDate.Text = Data.DueDate;

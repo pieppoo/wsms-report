@@ -41,7 +41,7 @@ namespace Test
             data.CompanyName = "PUDDING POP";
             data.CompanyAddress = "NULL";
             data.CompanyPhoneNo = "0778-423004";
-            
+            data.AddressPhoneNo = "alamat asd asd" + Environment.NewLine + "012313123123";
             data.OrderNo = "123123123123";
 
             data.OrderList = new List<ReceiptData.OrderDetails>

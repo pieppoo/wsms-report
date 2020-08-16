@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceReceipt));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.lblDueDate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
@@ -38,7 +39,6 @@
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblOrderNo = new DevExpress.XtraReports.UI.XRLabel();
             this.lblOrderNoTitle = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblAddressPhoneNo = new DevExpress.XtraReports.UI.XRLabel();
             this.lblName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblNameTitle = new DevExpress.XtraReports.UI.XRLabel();
@@ -88,7 +88,9 @@
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblPaymentMode = new DevExpress.XtraReports.UI.XRLabel();
+            this.rtAddressPhoneNo = new DevExpress.XtraReports.UI.XRRichText();
             ((System.ComponentModel.ISupportInitialize)(this.tblDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rtAddressPhoneNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -103,7 +105,6 @@
             this.xrLabel11,
             this.lblOrderNo,
             this.lblOrderNoTitle,
-            this.lblAddressPhoneNo,
             this.lblName,
             this.xrLabel6,
             this.lblNameTitle,
@@ -111,7 +112,8 @@
             this.lblCompanyPhoneNo,
             this.lblCompanyAddress,
             this.lblCompanyName,
-            this.xrLine2});
+            this.xrLine2,
+            this.rtAddressPhoneNo});
             this.Detail.Dpi = 254F;
             this.Detail.HeightF = 581.34F;
             this.Detail.Name = "Detail";
@@ -211,16 +213,6 @@
             this.lblOrderNoTitle.SizeF = new System.Drawing.SizeF(338.7565F, 58.41998F);
             this.lblOrderNoTitle.StylePriority.UseTextAlignment = false;
             this.lblOrderNoTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lblAddressPhoneNo
-            // 
-            this.lblAddressPhoneNo.Dpi = 254F;
-            this.lblAddressPhoneNo.LocationFloat = new DevExpress.Utils.PointFloat(0F, 342.0013F);
-            this.lblAddressPhoneNo.Name = "lblAddressPhoneNo";
-            this.lblAddressPhoneNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lblAddressPhoneNo.SizeF = new System.Drawing.SizeF(822.5403F, 201.6986F);
-            this.lblAddressPhoneNo.StylePriority.UseTextAlignment = false;
-            this.lblAddressPhoneNo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // lblName
             // 
@@ -360,7 +352,7 @@
             this.Detail1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.tblDetails});
             this.Detail1.Dpi = 254F;
-            this.Detail1.HeightF = 223.8369F;
+            this.Detail1.HeightF = 223.8368F;
             this.Detail1.Name = "Detail1";
             // 
             // tblDetails
@@ -673,6 +665,7 @@
             this.xrLabel26.StylePriority.UseTextAlignment = false;
             this.xrLabel26.Text = "No. Referensi";
             this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel26.Visible = false;
             // 
             // xrLabel25
             // 
@@ -684,6 +677,7 @@
             this.xrLabel25.StylePriority.UseTextAlignment = false;
             this.xrLabel25.Text = ":";
             this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel25.Visible = false;
             // 
             // lblRefNo
             // 
@@ -694,6 +688,7 @@
             this.lblRefNo.SizeF = new System.Drawing.SizeF(502.215F, 58.41998F);
             this.lblRefNo.StylePriority.UseTextAlignment = false;
             this.lblRefNo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblRefNo.Visible = false;
             // 
             // xrLabel23
             // 
@@ -705,6 +700,7 @@
             this.xrLabel23.StylePriority.UseTextAlignment = false;
             this.xrLabel23.Text = "No. Kartu";
             this.xrLabel23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel23.Visible = false;
             // 
             // xrLabel22
             // 
@@ -716,6 +712,7 @@
             this.xrLabel22.StylePriority.UseTextAlignment = false;
             this.xrLabel22.Text = ":";
             this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel22.Visible = false;
             // 
             // lblCardNo
             // 
@@ -726,6 +723,7 @@
             this.lblCardNo.SizeF = new System.Drawing.SizeF(502.215F, 58.41998F);
             this.lblCardNo.StylePriority.UseTextAlignment = false;
             this.lblCardNo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblCardNo.Visible = false;
             // 
             // xrLabel18
             // 
@@ -737,6 +735,7 @@
             this.xrLabel18.StylePriority.UseTextAlignment = false;
             this.xrLabel18.Text = "Pembayaran";
             this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel18.Visible = false;
             // 
             // xrLabel19
             // 
@@ -748,6 +747,7 @@
             this.xrLabel19.StylePriority.UseTextAlignment = false;
             this.xrLabel19.Text = ":";
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel19.Visible = false;
             // 
             // lblPaymentMode
             // 
@@ -758,6 +758,19 @@
             this.lblPaymentMode.SizeF = new System.Drawing.SizeF(502.215F, 58.41998F);
             this.lblPaymentMode.StylePriority.UseTextAlignment = false;
             this.lblPaymentMode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblPaymentMode.Visible = false;
+            // 
+            // rtAddressPhoneNo
+            // 
+            this.rtAddressPhoneNo.Dpi = 254F;
+            this.rtAddressPhoneNo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.rtAddressPhoneNo.LocationFloat = new DevExpress.Utils.PointFloat(0.0003229777F, 342.0013F);
+            this.rtAddressPhoneNo.Name = "rtAddressPhoneNo";
+            this.rtAddressPhoneNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.rtAddressPhoneNo.SerializableRtfString = resources.GetString("rtAddressPhoneNo.SerializableRtfString");
+            this.rtAddressPhoneNo.SizeF = new System.Drawing.SizeF(822.54F, 201.7F);
+            this.rtAddressPhoneNo.StylePriority.UseFont = false;
+            this.rtAddressPhoneNo.StylePriority.UsePadding = false;
             // 
             // InvoiceReceipt
             // 
@@ -777,6 +790,7 @@
             this.SnapGridSize = 31.75F;
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this.tblDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rtAddressPhoneNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -795,7 +809,6 @@
         private DevExpress.XtraReports.UI.XRLine xrLine3;
         private DevExpress.XtraReports.UI.XRLabel lblNameTitle;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
-        private DevExpress.XtraReports.UI.XRLabel lblAddressPhoneNo;
         private DevExpress.XtraReports.UI.XRLabel lblName;
         private DevExpress.XtraReports.UI.XRLabel lblOrderDate;
         private DevExpress.XtraReports.UI.XRLabel xrLabel13;
@@ -843,5 +856,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
+        private DevExpress.XtraReports.UI.XRRichText rtAddressPhoneNo;
     }
 }
