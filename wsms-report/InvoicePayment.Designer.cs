@@ -70,9 +70,9 @@
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblNameTitle = new DevExpress.XtraReports.UI.XRLabel();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
-            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrLabel41 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
+            this.xrLabel41 = new DevExpress.XtraReports.UI.XRLabel();
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -240,7 +240,7 @@
             // 
             this.lblBalanceAmount.Dpi = 254F;
             this.lblBalanceAmount.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lblBalanceAmount.LocationFloat = new DevExpress.Utils.PointFloat(1312.388F, 702.3477F);
+            this.lblBalanceAmount.LocationFloat = new DevExpress.Utils.PointFloat(1312.389F, 702.3477F);
             this.lblBalanceAmount.Name = "lblBalanceAmount";
             this.lblBalanceAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lblBalanceAmount.SizeF = new System.Drawing.SizeF(443.6328F, 66.15863F);
@@ -252,7 +252,7 @@
             // 
             this.lblPaidAmount.Dpi = 254F;
             this.lblPaidAmount.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lblPaidAmount.LocationFloat = new DevExpress.Utils.PointFloat(1312.388F, 636.1889F);
+            this.lblPaidAmount.LocationFloat = new DevExpress.Utils.PointFloat(1312.389F, 636.1889F);
             this.lblPaidAmount.Name = "lblPaidAmount";
             this.lblPaidAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lblPaidAmount.SizeF = new System.Drawing.SizeF(443.6328F, 66.15857F);
@@ -342,7 +342,7 @@
             // 
             this.lblTotalAmount.Dpi = 254F;
             this.lblTotalAmount.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lblTotalAmount.LocationFloat = new DevExpress.Utils.PointFloat(1312.388F, 570.0303F);
+            this.lblTotalAmount.LocationFloat = new DevExpress.Utils.PointFloat(1312.389F, 570.0303F);
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lblTotalAmount.SizeF = new System.Drawing.SizeF(443.6328F, 66.15863F);
@@ -470,7 +470,7 @@
             // lblDueDate
             // 
             this.lblDueDate.Dpi = 254F;
-            this.lblDueDate.LocationFloat = new DevExpress.Utils.PointFloat(1404.278F, 93.94485F);
+            this.lblDueDate.LocationFloat = new DevExpress.Utils.PointFloat(1404.279F, 93.94485F);
             this.lblDueDate.Name = "lblDueDate";
             this.lblDueDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lblDueDate.SizeF = new System.Drawing.SizeF(351.7426F, 62.36681F);
@@ -502,7 +502,7 @@
             // lblInvoiceNo
             // 
             this.lblInvoiceNo.Dpi = 254F;
-            this.lblInvoiceNo.LocationFloat = new DevExpress.Utils.PointFloat(1404.278F, 31.57801F);
+            this.lblInvoiceNo.LocationFloat = new DevExpress.Utils.PointFloat(1404.279F, 31.57801F);
             this.lblInvoiceNo.Name = "lblInvoiceNo";
             this.lblInvoiceNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lblInvoiceNo.SizeF = new System.Drawing.SizeF(351.7426F, 62.36683F);
@@ -638,13 +638,13 @@
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // BottomMargin
+            // xrLine1
             // 
-            this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 254F;
-            this.BottomMargin.Name = "BottomMargin";
-            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
-            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLine1.Dpi = 254F;
+            this.xrLine1.LineWidth = 10;
+            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 228.9983F);
+            this.xrLine1.Name = "xrLine1";
+            this.xrLine1.SizeF = new System.Drawing.SizeF(1801F, 26.67001F);
             // 
             // xrLabel41
             // 
@@ -659,13 +659,13 @@
             this.xrLabel41.Text = "FAKTUR PEMBAYARAN";
             this.xrLabel41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLine1
+            // BottomMargin
             // 
-            this.xrLine1.Dpi = 254F;
-            this.xrLine1.LineWidth = 10;
-            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 228.9983F);
-            this.xrLine1.Name = "xrLine1";
-            this.xrLine1.SizeF = new System.Drawing.SizeF(1801F, 26.67001F);
+            this.BottomMargin.Dpi = 254F;
+            this.BottomMargin.HeightF = 254F;
+            this.BottomMargin.Name = "BottomMargin";
+            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // InvoicePayment
             // 

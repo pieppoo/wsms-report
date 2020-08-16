@@ -84,6 +84,23 @@ namespace wsms.report
             }
         }
 
+        public void PrintReceipt()
+        {
+            if (ValidateForm())
+            {
+                using (ReportPrintTool printTool = new ReportPrintTool(this))
+                {
+                    // Invoke the Print dialog.
+                    printTool.Print();
+                    printTool.PrintingSystem.StartPrint += new DevExpress.XtraPrinting.PrintDocumentEventHandler(PrintingSystem_StartPrint);
+                }
+            }
+            else
+            {
+                throw new NullReferenceException("Receipt data hasn't populated");
+            }
+        }
+
         void PrintingSystem_StartPrint(object sender, DevExpress.XtraPrinting.PrintDocumentEventArgs e)
         {
             e.PrintDocument.EndPrint += new PrintEventHandler(PrintDocument_EndPrint);
