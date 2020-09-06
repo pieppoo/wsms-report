@@ -81,6 +81,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\SaleSummaryData.cs" />
+    <Compile Include="SaleSummaryReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SaleSummaryReport.Designer.cs">
+      <DependentUpon>SaleSummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PurchaseData.cs" />
+    <Compile Include="SalePurchaseReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalePurchaseReport.Designer.cs">
+      <DependentUpon>SalePurchaseReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PurchaseSummaryData.cs" />
+    <Compile Include="PurchaseSummaryReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurchaseSummaryReport.Designer.cs">
+      <DependentUpon>PurchaseSummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SupplierData.cs" />
+    <Compile Include="SupplierReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SupplierReport.Designer.cs">
+      <DependentUpon>SupplierReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomerReport.Designer.cs">
+      <DependentUpon>CustomerReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="InventoryReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -99,6 +133,7 @@
     <Compile Include="InvoiceReceipt.Designer.cs">
       <DependentUpon>InvoiceReceipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\CustomerData.cs" />
     <Compile Include="Model\Enums.cs" />
     <Compile Include="Model\InventoryData.cs" />
     <Compile Include="Model\PaymentData.cs" />
@@ -106,6 +141,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SaleSummaryReport.resx">
+      <DependentUpon>SaleSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalePurchaseReport.resx">
+      <DependentUpon>SalePurchaseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseSummaryReport.resx">
+      <DependentUpon>PurchaseSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierReport.resx">
+      <DependentUpon>SupplierReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerReport.resx">
+      <DependentUpon>CustomerReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InventoryReport.resx">
       <DependentUpon>InventoryReport.cs</DependentUpon>
     </EmbeddedResource>

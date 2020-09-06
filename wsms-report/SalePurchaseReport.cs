@@ -83,7 +83,7 @@ namespace wsms.report
         public bool ValidateForm()
         {
             return !string.IsNullOrEmpty(lblCompanyName.Text) &&
-                !string.IsNullOrEmpty(lblTotalTrx.Text);
+                !string.IsNullOrEmpty(lblGrandTotal.Text);
         }
 
         public void PrintReceiptDialog()
