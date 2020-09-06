@@ -55,16 +55,16 @@ namespace wsms.report
                             currRow.Cells[1].Padding = templateRow.Cells[1].Padding;
 
                             currRow.Cells[2].TextAlignment = TextAlignment.MiddleLeft;
-                            currRow.Cells[2].Padding = templateRow.Cells[1].Padding;
+                            currRow.Cells[2].Padding = templateRow.Cells[2].Padding;
 
                             currRow.Cells[3].TextAlignment = TextAlignment.MiddleLeft;
-                            currRow.Cells[3].Padding = templateRow.Cells[1].Padding;
+                            currRow.Cells[3].Padding = templateRow.Cells[3].Padding;
 
                             currRow.Cells[4].TextAlignment = TextAlignment.MiddleLeft;
-                            currRow.Cells[4].Padding = templateRow.Cells[1].Padding;
+                            currRow.Cells[4].Padding = templateRow.Cells[4].Padding;
 
                             currRow.Cells[5].TextAlignment = TextAlignment.MiddleRight;
-                            currRow.Cells[5].Padding = templateRow.Cells[1].Padding;
+                            currRow.Cells[5].Padding = templateRow.Cells[5].Padding;
                         }
                     }
                 }
