@@ -81,6 +81,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InventoryReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InventoryReport.Designer.cs">
+      <DependentUpon>InventoryReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="InvoicePayment.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -94,11 +100,15 @@
       <DependentUpon>InvoiceReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Enums.cs" />
+    <Compile Include="Model\InventoryData.cs" />
     <Compile Include="Model\PaymentData.cs" />
     <Compile Include="Model\ReceiptData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="InventoryReport.resx">
+      <DependentUpon>InventoryReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InvoicePayment.resx">
       <DependentUpon>InvoicePayment.cs</DependentUpon>
     </EmbeddedResource>

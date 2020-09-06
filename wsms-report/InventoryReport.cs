@@ -7,17 +7,14 @@ using wsms.report.Model;
 
 namespace wsms.report
 {
-    public partial class InvoiceReceipt : DevExpress.XtraReports.UI.XtraReport
+    public partial class InventoryReport : DevExpress.XtraReports.UI.XtraReport
     {
-        public ReceiptData Data { get; set; }
-        public ReceiptType Type { get; set; }
-        
+        public InventoryData Data { get; set; }
+
         public delegate void PrintComplete(object o, PrintEventArgs e);
         public event PrintComplete OnPrintingReceiptComplete;
 
-        public float DEFAULT_ROW_HEIGHT = 60f;
-
-        public InvoiceReceipt()
+        public InventoryReport()
         {
             InitializeComponent();
         }
@@ -26,76 +23,55 @@ namespace wsms.report
         {
             if (Data != null)
             {
-                if (Type == ReceiptType.Sales)
-                {
-                    lblNameTitle.Text = "Nama Pelanggan";
-                    lblOrderNoTitle.Text = "Invoice No.";
-                    lblOrderDateTitle.Text = "Tanggal Invoice";
-                }
-                else
-                {
-                    lblNameTitle.Text = "Supplier";
-                    lblOrderNoTitle.Text = "Delivery Order No.";
-                    lblOrderDateTitle.Text = "Tanggal Delivery Order";
-                }
-
                 lblCompanyName.Text = Data.CompanyName;
-                lblCompanyAddress.Text = Data.CompanyAddress;
-                lblCompanyPhoneNo.Text = Data.CompanyPhoneNo;
+                lblTitle.Text       = Data.ReportTitle;
+                lblPrintDate.Text   = DateTime.Now.ToString("dd/MM/yyyy");
+                lblTotalItem.Text   = Data.ItemList.Count.ToString();
 
-                lblName.Text = Data.Name;
-                rtAddressPhoneNo.Text = Data.AddressPhoneNo;
-                lblOrderNo.Text = Data.OrderNo;
-                lblOrderDate.Text = Data.OrderDate;
-                lblDueDate.Text = Data.DueDate;
-
-                lblPaymentMode.Text = Data.PaymentMode;
-                lblCardNo.Text = Data.CardNo;
-                lblRefNo.Text = Data.RefNo;
-                lblSubTotal.Text = Data.SubTotal;
-                lblDiscount.Text = Data.Discount;
-                lblTotalAmount.Text = Data.TotalAmount;
-
-                if (Data.OrderList != null && Data.OrderList.Count > 0)
+                if (Data.ItemList != null && Data.ItemList.Count > 0)
                 {
                     var i = 1;
                     var templateRow = tblDetails.Rows[1];
                     var currRow = templateRow;
 
-                    foreach (var item in Data.OrderList)
+                    foreach (var item in Data.ItemList)
                     {
-                        if (item.ItemName.Length > 35)
-                        {
-                            currRow.HeightF = DEFAULT_ROW_HEIGHT * (float)Math.Ceiling((item.ItemName.Length * 1.0) / 35);
-                        }
-
                         currRow.Cells[0].Text = i.ToString();
-                        currRow.Cells[1].Text = item.ItemName;
-                        currRow.Cells[2].Text = item.Count;
-                        currRow.Cells[3].Text = item.UnitPrice;
-                        currRow.Cells[4].Text = item.Discount;
-                        currRow.Cells[5].Text = item.Total;
+                        currRow.Cells[1].Text = item.Category;
+                        currRow.Cells[2].Text = item.Brand;
+                        currRow.Cells[3].Text = item.Code;
+                        currRow.Cells[4].Text = item.Name;
+                        currRow.Cells[5].Text = item.Barcode;
+                        currRow.Cells[6].Text = item.StockCount;
+                        currRow.Cells[7].Text = item.PurchasePrice;
 
-                        if (!Data.OrderList.Last().Equals(item))
+                        if (!Data.ItemList.Last().Equals(item))
                         {
                             tblDetails.InsertRowBelow(currRow);
                             i++;
                             currRow = tblDetails.Rows[i];
-                            
+
                             currRow.Cells[0].TextAlignment = TextAlignment.MiddleCenter;
 
                             currRow.Cells[1].TextAlignment = TextAlignment.MiddleLeft;
                             currRow.Cells[1].Padding = templateRow.Cells[1].Padding;
 
-                            currRow.Cells[2].TextAlignment = TextAlignment.MiddleCenter;
+                            currRow.Cells[2].TextAlignment = TextAlignment.MiddleLeft;
+                            currRow.Cells[2].Padding = templateRow.Cells[1].Padding;
 
-                            currRow.Cells[3].TextAlignment = TextAlignment.MiddleRight;
-                            currRow.Cells[3].Padding = templateRow.Cells[3].Padding;
+                            currRow.Cells[3].TextAlignment = TextAlignment.MiddleLeft;
+                            currRow.Cells[3].Padding = templateRow.Cells[1].Padding;
 
-                            currRow.Cells[4].TextAlignment = TextAlignment.MiddleCenter;
+                            currRow.Cells[4].TextAlignment = TextAlignment.MiddleLeft;
+                            currRow.Cells[4].Padding = templateRow.Cells[1].Padding;
 
-                            currRow.Cells[5].TextAlignment = TextAlignment.MiddleRight;
-                            currRow.Cells[5].Padding = templateRow.Cells[5].Padding;
+                            currRow.Cells[5].TextAlignment = TextAlignment.MiddleLeft;
+                            currRow.Cells[5].Padding = templateRow.Cells[1].Padding;
+
+                            currRow.Cells[6].TextAlignment = TextAlignment.MiddleCenter;
+
+                            currRow.Cells[7].TextAlignment = TextAlignment.MiddleRight;
+                            currRow.Cells[7].Padding = templateRow.Cells[1].Padding;
                         }
                     }
                 }
@@ -105,9 +81,7 @@ namespace wsms.report
         public bool ValidateForm()
         {
             return !string.IsNullOrEmpty(lblCompanyName.Text) &&
-                !string.IsNullOrEmpty(lblCompanyAddress.Text) &&
-                !string.IsNullOrEmpty(lblCompanyPhoneNo.Text) &&
-                !string.IsNullOrEmpty(lblOrderNo.Text);
+                !string.IsNullOrEmpty(lblTotalItem.Text);
         }
 
         public void PrintReceiptDialog()
@@ -123,7 +97,7 @@ namespace wsms.report
             }
             else
             {
-                throw new NullReferenceException("Receipt data hasn't populated");
+                throw new NullReferenceException("Report data hasn't populated");
             }
         }
 
@@ -140,7 +114,7 @@ namespace wsms.report
             }
             else
             {
-                throw new NullReferenceException("Receipt data hasn't populated");
+                throw new NullReferenceException("Report data hasn't populated");
             }
         }
 
@@ -188,5 +162,6 @@ namespace wsms.report
                 }
             }
         }
+
     }
 }
