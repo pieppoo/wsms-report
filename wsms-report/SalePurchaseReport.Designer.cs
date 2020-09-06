@@ -1,6 +1,6 @@
 ﻿namespace wsms.report
 {
-    partial class PurchaseReport
+    partial class SalePurchaseReport
     {
         /// <summary>
         /// Required designer variable.
@@ -300,7 +300,6 @@
             this.lblTitle.SizeF = new System.Drawing.SizeF(1900.998F, 92.81581F);
             this.lblTitle.StylePriority.UseFont = false;
             this.lblTitle.StylePriority.UseTextAlignment = false;
-            this.lblTitle.Text = "Laporan Pembelian Barang";
             this.lblTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // TopMargin

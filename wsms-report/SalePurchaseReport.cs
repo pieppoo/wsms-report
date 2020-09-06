@@ -7,14 +7,14 @@ using wsms.report.Model;
 
 namespace wsms.report
 {
-    public partial class PurchaseReport : DevExpress.XtraReports.UI.XtraReport
+    public partial class SalePurchaseReport : DevExpress.XtraReports.UI.XtraReport
     {
-        public PurchaseData Data { get; set; }
+        public SalePurchaseData Data { get; set; }
 
         public delegate void PrintComplete(object o, PrintEventArgs e);
         public event PrintComplete OnPrintingReceiptComplete;
 
-        public PurchaseReport()
+        public SalePurchaseReport()
         {
             InitializeComponent();
         }
@@ -33,13 +33,13 @@ namespace wsms.report
 
                 lblPrintDate.Text   = DateTime.Now.ToString("dd/MM/yyyy");
 
-                if (Data.PurchaseList != null && Data.PurchaseList.Count > 0)
+                if (Data.DetailList != null && Data.DetailList.Count > 0)
                 {
                     var i = 1;
                     var templateRow = tblDetails.Rows[1];
                     var currRow = templateRow;
 
-                    foreach (var item in Data.PurchaseList)
+                    foreach (var item in Data.DetailList)
                     {
                         currRow.Cells[0].Text = i.ToString();
                         currRow.Cells[1].Text = item.InvoiceNo;
@@ -49,7 +49,7 @@ namespace wsms.report
                         currRow.Cells[5].Text = item.Discount;
                         currRow.Cells[6].Text = item.Total;
 
-                        if (!Data.PurchaseList.Last().Equals(item))
+                        if (!Data.DetailList.Last().Equals(item))
                         {
                             tblDetails.InsertRowBelow(currRow);
                             i++;

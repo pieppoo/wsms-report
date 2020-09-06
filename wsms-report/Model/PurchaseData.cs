@@ -5,7 +5,7 @@ using System.Text;
 
 namespace wsms.report.Model
 {
-    public class PurchaseData
+    public class SalePurchaseData
     {
         public string CompanyName { get; set; }
         public string ReportTitle { get; set; }
@@ -15,9 +15,9 @@ namespace wsms.report.Model
         public string Discount { get; set; }
         public string GrandTotal { get; set; }
 
-        public List<Purchase> PurchaseList { get; set; }
+        public List<Details> DetailList { get; set; }
 
-        public class Purchase
+        public class Details
         {
             public string InvoiceNo { get; set; }
             public string ItemName { get; set; }
