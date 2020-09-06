@@ -1,6 +1,6 @@
 ﻿namespace wsms.report
 {
-    partial class PurchaseSummaryReport
+    partial class SaleSummaryReport
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,7 @@
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -44,6 +45,7 @@
             this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -124,6 +126,7 @@
             this.xrTableCell1,
             this.xrTableCell2,
             this.xrTableCell3,
+            this.xrTableCell17,
             this.xrTableCell4,
             this.xrTableCell5,
             this.xrTableCell6,
@@ -159,9 +162,9 @@
             this.xrTableCell2.StylePriority.UseForeColor = false;
             this.xrTableCell2.StylePriority.UsePadding = false;
             this.xrTableCell2.StylePriority.UseTextAlignment = false;
-            this.xrTableCell2.Text = "Waktu Pembelian";
+            this.xrTableCell2.Text = "Waktu Penjualan";
             this.xrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell2.Weight = 0.42922312091173004D;
+            this.xrTableCell2.Weight = 0.37903349998369229D;
             // 
             // xrTableCell3
             // 
@@ -170,9 +173,18 @@
             this.xrTableCell3.StylePriority.UseBackColor = false;
             this.xrTableCell3.StylePriority.UseForeColor = false;
             this.xrTableCell3.StylePriority.UseTextAlignment = false;
-            this.xrTableCell3.Text = "Supplier";
+            this.xrTableCell3.Text = "Pelanggan";
             this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell3.Weight = 0.67162599768347053D;
+            this.xrTableCell3.Weight = 0.60599349525469415D;
+            // 
+            // xrTableCell17
+            // 
+            this.xrTableCell17.Dpi = 254F;
+            this.xrTableCell17.Name = "xrTableCell17";
+            this.xrTableCell17.StylePriority.UseTextAlignment = false;
+            this.xrTableCell17.Text = "Level Harga";
+            this.xrTableCell17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell17.Weight = 0.19145239967129135D;
             // 
             // xrTableCell4
             // 
@@ -183,7 +195,7 @@
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
             this.xrTableCell4.Text = "Tipe Pembayaran";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell4.Weight = 0.32113264991198981D;
+            this.xrTableCell4.Weight = 0.291830839977546D;
             // 
             // xrTableCell5
             // 
@@ -196,7 +208,7 @@
             this.xrTableCell5.StylePriority.UseTextAlignment = false;
             this.xrTableCell5.Text = "Total Awal (Rp)";
             this.xrTableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell5.Weight = 0.33062573000002465D;
+            this.xrTableCell5.Weight = 0.33862047697402242D;
             // 
             // xrTableCell6
             // 
@@ -209,7 +221,7 @@
             this.xrTableCell6.StylePriority.UseTextAlignment = false;
             this.xrTableCell6.Text = "Diskon (%)";
             this.xrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell6.Weight = 0.20153224829582167D;
+            this.xrTableCell6.Weight = 0.21487858717910183D;
             // 
             // xrTableCell13
             // 
@@ -218,7 +230,7 @@
             this.xrTableCell13.StylePriority.UseTextAlignment = false;
             this.xrTableCell13.Text = "Total Belanja (Rp)";
             this.xrTableCell13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell13.Weight = 0.33234909038250982D;
+            this.xrTableCell13.Weight = 0.33417355136634386D;
             // 
             // xrTableCell15
             // 
@@ -227,7 +239,7 @@
             this.xrTableCell15.StylePriority.UseTextAlignment = false;
             this.xrTableCell15.Text = "Tempoh Bayar";
             this.xrTableCell15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell15.Weight = 0.35508423461974059D;
+            this.xrTableCell15.Weight = 0.28559022139859519D;
             // 
             // xrTableRow2
             // 
@@ -235,6 +247,7 @@
             this.xrTableCell7,
             this.xrTableCell8,
             this.xrTableCell9,
+            this.xrTableCell18,
             this.xrTableCell10,
             this.xrTableCell11,
             this.xrTableCell12,
@@ -259,7 +272,7 @@
             this.xrTableCell8.StylePriority.UsePadding = false;
             this.xrTableCell8.StylePriority.UseTextAlignment = false;
             this.xrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell8.Weight = 0.42922312091173004D;
+            this.xrTableCell8.Weight = 0.37903349998369229D;
             // 
             // xrTableCell9
             // 
@@ -269,7 +282,15 @@
             this.xrTableCell9.StylePriority.UsePadding = false;
             this.xrTableCell9.StylePriority.UseTextAlignment = false;
             this.xrTableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell9.Weight = 0.67162599768347053D;
+            this.xrTableCell9.Weight = 0.60599349525469415D;
+            // 
+            // xrTableCell18
+            // 
+            this.xrTableCell18.Dpi = 254F;
+            this.xrTableCell18.Name = "xrTableCell18";
+            this.xrTableCell18.StylePriority.UseTextAlignment = false;
+            this.xrTableCell18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell18.Weight = 0.19145239967129135D;
             // 
             // xrTableCell10
             // 
@@ -278,7 +299,7 @@
             this.xrTableCell10.StylePriority.UsePadding = false;
             this.xrTableCell10.StylePriority.UseTextAlignment = false;
             this.xrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell10.Weight = 0.32113264991198981D;
+            this.xrTableCell10.Weight = 0.291830839977546D;
             // 
             // xrTableCell11
             // 
@@ -288,7 +309,7 @@
             this.xrTableCell11.StylePriority.UsePadding = false;
             this.xrTableCell11.StylePriority.UseTextAlignment = false;
             this.xrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell11.Weight = 0.33062573000002465D;
+            this.xrTableCell11.Weight = 0.33862047697402242D;
             // 
             // xrTableCell12
             // 
@@ -297,7 +318,7 @@
             this.xrTableCell12.StylePriority.UsePadding = false;
             this.xrTableCell12.StylePriority.UseTextAlignment = false;
             this.xrTableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell12.Weight = 0.20153224829582167D;
+            this.xrTableCell12.Weight = 0.21487858717910183D;
             // 
             // xrTableCell14
             // 
@@ -307,7 +328,7 @@
             this.xrTableCell14.StylePriority.UsePadding = false;
             this.xrTableCell14.StylePriority.UseTextAlignment = false;
             this.xrTableCell14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell14.Weight = 0.33234909038250982D;
+            this.xrTableCell14.Weight = 0.33417355136634386D;
             // 
             // xrTableCell16
             // 
@@ -316,7 +337,7 @@
             this.xrTableCell16.StylePriority.UsePadding = false;
             this.xrTableCell16.StylePriority.UseTextAlignment = false;
             this.xrTableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell16.Weight = 0.35508423461974059D;
+            this.xrTableCell16.Weight = 0.28559022139859519D;
             // 
             // lblTitle
             // 
@@ -328,7 +349,7 @@
             this.lblTitle.SizeF = new System.Drawing.SizeF(1900.998F, 92.81581F);
             this.lblTitle.StylePriority.UseFont = false;
             this.lblTitle.StylePriority.UseTextAlignment = false;
-            this.lblTitle.Text = "Laporan Rangkuman Pembelian Barang";
+            this.lblTitle.Text = "Laporan Rangkuman Penjualan";
             this.lblTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // TopMargin
@@ -647,7 +668,7 @@
             this.lblTotalCash.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.lblTotalCash.XlsxFormatString = "";
             // 
-            // PurchaseSummaryReport
+            // SaleSummaryReport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
@@ -718,5 +739,7 @@
         private DevExpress.XtraReports.UI.XRLabel lblDiscount;
         private DevExpress.XtraReports.UI.XRLabel xrLabel13;
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell17;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell18;
     }
 }
